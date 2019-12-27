@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <main class="container">
+    <h1 class="d-flex justify-content-between">
+        {{ .Page.Title }}
+        <small><a href="{{ "index.xml" | relURL }}">{{ i18n "rss-feed" }}</a></small>
+    </h1>
+    {{ if .IsTranslated }}
+    <h4>{{ i18n "Translations" }}</h4>
+    <div class="translation-list">
+      {{ range .Translations }}
+      <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ $pages := .Pages }}
+    {{ range .Site.Home.Translations }}
+    {{ $pages = $pages | lang.Merge .Pages }}
+    {{ end }}
+    {{ range $pages }}
+      {{ if (not (eq (countwords .Content) 0)) }}
+      <h2>{{ .Title }}</h2>
+      <small>{{ .Date.Format "Mon, 02 Jan 2006" | safeHTML }}</small><br />
+      <p>{{ .Summary }}</p>
+      <a href="{{ .Permalink }}" class="button learn-more">{{ i18n "learn-more" }}</a>
+      {{ end }}
+    {{ end }}
+  </main>
+{{ end }}

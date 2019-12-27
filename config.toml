@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = ""
 languageCode = "en-us"
-title = "KDE-Hugo-theme"
-theme = "kde-hugo-theme"
+title = "Marcos theme"
+theme = "aether-hugo"

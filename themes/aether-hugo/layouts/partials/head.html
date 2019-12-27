@@ -1,0 +1,61 @@
+<head>
+    {{ $version := 3 }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="KDE is an open community of friendly people who want to create a world in which everyone has control over their digital life and enjoys freedom and privacy.">
+    <meta name="author" content="">
+    <title>{{ .Title }} : KDE.org</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ $title := .Title }}
+    {{ with .OutputFormats.Get "RSS" }}<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $title }}" />{{ end }}
+
+    <!-- Facebook open graph configuration -->
+    <meta property="og:title" content="{{ .Title }} : KDE.org">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:description" content="KDE is an open community of friendly people who want to create a world in which everyone has control over their digital life and enjoys freedom and privacy.">
+    <meta property="og:site_name" content="KDE.org">
+    <meta property="og:image" content="https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-128x128.png">
+
+    <!-- Twitter card configuration -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kdecommunity">
+    <meta name="twitter:title" content="{{ .Title }} : KDE.org">
+    <meta name="twitter:description" content="KDE is an open community of friendly people who want to create a world in which everyone has control over their digital life and enjoys freedom and privacy.">
+    <meta name="twitter:image" content="https://kde.org/stuff/clipart/logo/kde-logo-white-blue-rounded-128x128.png">
+
+    <!-- schema.org metadata -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://kde.org/",
+        "name": "KDE",
+        "description": "KDE is an open community of friendly people who want to create a world in which everyone has control over their digital life and enjoys freedom and privacy."
+    }
+    </script>
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="/aether/media/180x180.png">
+    <link rel="shortcut icon" href="/aether/media/192x192.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.kde.org/aether-devel/bootstrap.css?{{ $version }}" rel="stylesheet">
+    <link href="https://cdn.kde.org/aether-devel/aether-kde-org.css?{{ $version }}" rel="stylesheet">
+
+    {{ if eq .Type "announcement" }}
+    <link href="https://cdn.kde.org/aether-devel/kde-org/releaseAnnouncement.css?{{ $version }}" rel="stylesheet">
+    {{ end }}
+
+    <!-- Standard JS Files, bootstrap Async -->
+    <script src="https://cdn.kde.org/aether-devel/bootstrap.js?{{ $version }}" defer=""></script>
+    <style>
+    .translation-list a:after {
+      content: ' | ';
+    }
+
+    .translation-list a:last-child:after {
+      content: '';
+    }
+    </style>
+</head>

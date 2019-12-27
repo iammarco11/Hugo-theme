@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb mt-4">
+        <li class="breadcrumb-item" aria-current="page"><a href="https://kde.org/announcements">{{ i18n "announcements" }}</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="{{ "/" | relLangURL }}">{{ i18n "releases" }}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+    </ol>
+  </nav>
+</div>
+<main class="container">
+  {{ if .IsTranslated }}
+  <h4>{{ i18n "Translations" }}</h4>
+  <div class="translation-list">
+    {{ range .Translations }}
+    <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</main>
+{{ end }}

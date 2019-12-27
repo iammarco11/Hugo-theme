@@ -1,0 +1,1 @@
+<video src="{{ with .Get "src"}}{{ . }}{{ end }}" class="embed-responsive  ml-auto mr-auto {{ with .Get "class"}}{{ . }}{{ end }}"  {{ with .Get "style"}}style="{{ . }}"{{ end }} muted autoplay loop></video>

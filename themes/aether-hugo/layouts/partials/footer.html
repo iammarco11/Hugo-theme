@@ -1,0 +1,117 @@
+<footer id="kFooter" class="footer">
+    <section id="kPatrons" class="container">
+        <h3>{{ i18n "kde-patrons" }}</h3>
+        <div class="row d-flex justify-content-center">
+            <span><img src="https://kde.org/aether/media/patrons/canonical.svg" alt="Logo of KDE Patron: Canonical"></span>
+            <span><img src="https://kde.org/aether/media/patrons/google.svg" alt="Logo of KDE Patron: Google"></span>
+            <span><img src="https://kde.org/aether/media/patrons/suse.svg" alt="Logo of KDE Patron: SUSE"></span>
+            <span><img src="https://kde.org/aether/media/patrons/qt-company.svg" alt="Logo of KDE Patron: The Qt Company"></span>
+            <span class="d-flex align-items-center"><img src="https://kde.org/aether/media/patrons/blue-systems.png" alt="Logo of KDE Patron: Blue System" class="large"></span>
+            <span><img src="https://kde.org/aether/media/patrons/privateinternetaccess.svg" alt="Logo of KDE Patron: Private Internet Access"></span>
+            <span><img src="https://kde.org/aether/media/patrons/enioka-haute-couture-logo.svg" alt="Logo of KDE Patron: enioka Haute Couture"></span>
+        </div>
+    </section>
+
+    <section id="kFooterIncome" class="container">
+        <div id="kDonateForm">
+            <div class="center">
+                <h3>{{ i18n "donate-to-kde" }} <a href="https://kde.org/community/donations/index.php#money" target="_blank">{{ i18n "Why Donate?" }}</a></h3>
+                <form action="https://www.paypal.com/en_US/cgi-bin/webscr" method="post" onsubmit="return amount.value >= 2 || window.confirm('{{ i18n "donation-small" }}');">
+                    <input type="hidden" name="cmd" value="_donations">
+                    <input type="hidden" name="lc" value="GB">
+                    <input type="hidden" name="item_name" value="{{ i18n "development-and-communication" }}">
+                    <input type="hidden" name="custom" value="//kde.org/index/donation_box">
+                    <input type="hidden" name="currency_code" value="EUR">
+                    <input type="hidden" name="cbt" value="{{ i18n "return-kde" }}">
+                    <input type="hidden" name="return" value="https://kde.org/community/donations/thanks_paypal">
+                    <input type="hidden" name="notify_url" value="https://kde.org/community/donations/notify.php">
+                    <input type="hidden" name="business" value="kde-ev-paypal@kde.org">
+                    <input type="text" name="amount" value="20.00" id="donateAmountField" data-kpxc-id="donateAmountField"> €
+                    <button type="submit" id="donateSubmit">{{ i18n "donate-via-paypal" }}</button>
+                </form>
+
+                <a href="https://kde.org/community/donations/others" id="otherWaysDonate" target="_blank">{{ i18n "other-donate" }}</a>
+            </div>
+        </div>
+        <div id="kMetaStore">
+            <div class="center">
+                <h3>{{ i18n "visit-kde-metastore" }}</h3>
+                <p>{{ i18n "show-love-store" }}</p>
+                <a href="https://kde.org/stuff/metastore" class="button">{{ i18n "click-store" }}</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="kLinks" class="container">
+        <div class="row">
+            <nav class="col-sm">
+                <h3>{{ i18n "products" }}</h3>
+                <a href="https://kde.org/plasma-desktop">Plasma</a>
+                <a href="https://kde.org/applications/">{{ i18n "kde-applications" }}</a>
+                <a href="https://kde.org/products/frameworks/">KDE Frameworks</a>
+                <a href="https://plasma-mobile.org/overview/">Plasma Mobile</a>
+                <a href="https://neon.kde.org/">KDE neon</a>
+                <a href="https://wikitolearn.org/" target="_blank">WikiToLearn</a>
+            </nav>
+            
+            <nav class="col-sm">
+                <h3>{{ i18n "develop" }}</h3>
+                <a href="https://techbase.kde.org/">TechBase Wiki</a>
+                <a href="https://api.kde.org/">{{ i18n "api-doc" }}</a>
+                <a href="https://doc.qt.io/" target="_blank">Qt Documentation</a>
+                <a href="https://inqlude.org/" target="_blank">Inqlude Documentation</a>
+            </nav>
+            
+            <nav class="col-sm">
+                <h3>{{ i18n "news-and-press" }}</h3>
+                <a href="/announcements/">{{ i18n "announcements" }}</a>
+                <a href="https://dot.kde.org/">KDE.news</a>
+                <a href="https://planetkde.org/">Planet KDE</a>
+                <a href="https://www.kde.org/screenshots">{{ i18n "screenshots" }}</a>
+                <a href="https://www.kde.org/contact/">{{ i18n "press-contact" }}</a>
+            </nav>
+            
+            <nav class="col-sm">
+                <h3>{{ i18n "ressources" }}</h3>
+                <a href="https://community.kde.org/Main_Page">Community Wiki</a>
+                <a href="https://userbase.kde.org/">UserBase Wiki</a>
+                <a href="/stuff/">Miscellaneous Stuff</a>
+                <a href="/support/">Support</a>
+                <a href="/support/international">{{ i18n "international-websites" }}</a>
+                <a href="/download/">{{ i18n "download-kde" }}</a>
+                <a href="/code-of-conduct/">{{ i18n "coc" }}</a>
+            </nav>
+            
+            <nav class="col-sm">
+                <h3>{{ i18n "destinations" }}</h3>
+                <a href="https://store.kde.org/">KDE Store</a>
+                <a href="https://ev.kde.org/">KDE e.V.</a>
+                <a href="https://www.kde.org/community/whatiskde/kdefreeqtfoundation.php">KDE Free Qt Foundation</a>
+                <a href="https://timeline.kde.org/">{{ i18n "timeline" }}</a>
+            </nav>
+        </div>
+    </section>
+
+    <section id="kSocial" class="container kSocialLinks">
+        <a class="shareFacebook" href="https://www.facebook.com/kde/" rel="nofollow">Post on Facebook</a>
+        <a class="shareTwitter" href="https://twitter.com/kdecommunity" rel="nofollow">Share on Twitter</a>
+        <a class="shareDiaspora" href="https://joindiaspora.com/people/9c3d1a454919ef06" rel="nofollow">Share on Diaspora</a>
+        <a class="shareMastodon" href="https://mastodon.technology/@kde" rel="me nofollow">Share on Mastodon</a>
+        <a class="shareLinkedIn" href="https://www.linkedin.com/company/29561/" rel="nofollow">Share on LinkedIn</a>
+        <a class="shareReddit" href="https://www.reddit.com/r/kde/" rel="nofollow">Share on Reddit</a>
+        <a class="shareYouTube" href="https://www.youtube.com/channel/UCF3I1gf7GcbmAb0mR6vxkZQ" rel="nofollow">Share on YouTube</a>
+        <a class="sharePeerTube" href="https://peertube.mastodon.host/accounts/kde/videos" rel="nofollow">Share on PeerTube</a>
+    </section>
+
+    <section id="kLegal" class="container">
+        <div class="row">
+            <small class="col-4">
+                Maintained by <a href="mailto:kde-wwww@kde.org">KDE WWW</a>
+            </small>
+            <small class="col-8 text-right">
+                KDE<sup>®</sup> and <a href="/media/images/trademark_kde_gear_black_logo.png">the K Desktop Environment<sup>®</sup> logo</a> are registered trademarks of <a href="https://ev.kde.org/" title="Homepage of the KDE non-profit Organization">KDE e.V.</a> |
+                <a href="https://www.kde.org/community/whatiskde/impressum">Legal</a>
+            </small>
+        </div>
+    </section>
+</footer>
